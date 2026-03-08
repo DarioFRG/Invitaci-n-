@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 ¡Cumpleaños Eileen Luciana! 🎉</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Fondo animado con partículas -->
+    <div class="stars"></div>
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <div class="container">
+        <div class="card" id="invitationCard">
+            <!-- Top decorativo -->
+            <div class="top-decoration">
+                <div class="balloon balloon-1">🎈</div>
+                <div class="balloon balloon-2">🎈</div>
+                <div class="balloon balloon-3">🎈</div>
+                <div class="balloon balloon-4">🎈</div>
+                <div class="balloon balloon-5">🎈</div>
+            </div>
+
+            <!-- Encabezado Premium -->
+            <div class="header">
+                <div class="header-content">
+                    <h1 class="main-title">
+                        <span class="sparkle">✨</span>
+                        ¡ESTÁ INVITADO!
+                        <span class="sparkle">✨</span>
+                    </h1>
+                    <p class="subtitle">A la Celebración más Especial del Año</p>
+                    <div class="divider"></div>
+                </div>
+            </div>
+
+            <!-- Sección de Foto Premium -->
+            <div class="photo-section">
+                <div class="photo-wrapper">
+                    <div class="photo-frame">
+                        <div class="frame-shine"></div>
+                        <img id="photoImage" src="img/eileen.jpg" alt="Eileen Luciana" class="photo">
+                        <div class="frame-border"></div>
+                    </div>
+                    <div class="photo-label">
+                        <span class="label-text">¡La Cumpleañera!</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información Principal -->
+            <div class="info-section">
+                <div class="name-badge">
+                    <h2>Eileen Luciana</h2>
+                    <div class="age-circle">
+                        <span class="age-number">10</span>
+                        <span class="age-text">años</span>
+                    </div>
+                </div>
+
+                <!-- Detalles con iconos mejorados -->
+                <div class="details-grid">
+                    <!-- Fecha -->
+                    <div class="detail-card date-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-calendar-days"></i>
+                        </div>
+                        <div class="detail-content">
+                            <span class="detail-label">Fecha</span>
+                            <span class="detail-value">14 de Marzo</span>
+                            <span class="detail-year">2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Hora -->
+                    <div class="detail-card time-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="detail-content">
+                            <span class="detail-label">Hora</span>
+                            <span class="detail-value">3:00 PM</span>
+                            <span class="detail-note">¡No lleguemos tarde!</span>
+                        </div>
+                    </div>
+
+                    <!-- Lugar -->
+                    <div class="detail-card location-card">
+                        <div class="detail-icon">
+                            <i class="fas fa-map-pin"></i>
+                        </div>
+                        <div class="detail-content">
+                            <span class="detail-label">Lugar</span>
+                            <span class="detail-value">Kiosco del Casino</span>
+                            <span class="detail-note">de Suboficiales</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Diversión -->
+            <div class="fun-section">
+                <div class="fun-item">
+                    <span class="fun-icon">🎂</span>
+                    <span class="fun-text">Pastel Delicioso</span>
+                </div>
+                <div class="fun-item">
+                    <span class="fun-icon">🎁</span>
+                    <span class="fun-text">Regalos Sorpresa</span>
+                </div>
+                <div class="fun-item">
+                    <span class="fun-icon">🎵</span>
+                    <span class="fun-text">Música y Diversión</span>
+                </div>
+                <div class="fun-item">
+                    <span class="fun-icon">🍾</span>
+                    <span class="fun-text">Celebración Total</span>
+                </div>
+            </div>
+
+            <!-- Pie de página Elegante -->
+            <div class="footer">
+                <div class="footer-balloons">
+                    <div class="balloon-footer">🎈</div>
+                    <div class="balloon-footer">🎊</div>
+                    <div class="balloon-footer">🎉</div>
+                    <div class="balloon-footer">🎊</div>
+                    <div class="balloon-footer">🎈</div>
+                </div>
+                <p class="footer-message">¡Esperamos tu compañía para celebrar este momento especial!</p>
+                <p class="rsvp">Confirma tu asistencia con nosotros</p>
+                <div class="hearts">
+                    <span class="heart">❤️</span>
+                    <span class="heart">💕</span>
+                    <span class="heart">❤️</span>
+                </div>
+            </div>
+
+            <!-- Decoración inferior -->
+            <div class="bottom-decoration">
+                <div class="ribbon"></div>
+            </div>
+        </div>
+
+        <!-- Botones de Acción Mejorados -->
+        <div class="button-group">
+            <button class="btn btn-pdf" onclick="downloadPDF()">
+                <i class="fas fa-file-pdf"></i>
+                <span>Descargar PDF</span>
+            </button>
+            <button class="btn btn-print" onclick="window.print()">
+                <i class="fas fa-print"></i>
+                <span>Imprimir</span>
+            </button>
+            <button class="btn btn-confetti" onclick="createConfetti()">
+                <i class="fas fa-wand-magic-sparkles"></i>
+                <span>¡Sorpresa!</span>
+            </button>
+        </div>
+
+        <!-- Instrucción -->
+        <div class="instruction">
+            <p>💡 Haz clic en la foto para cambiarla</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
